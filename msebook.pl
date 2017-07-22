@@ -65,7 +65,8 @@ $res->dom->find( $selector )->each( sub{
     mkdir $category unless( -d $category );
     $ua->max_redirects(5)
       ->get( $url )
-      ->result->content->asset->move_to($category);
+      ->result->content->asset->move_to($category . '/' . $title . '.' . $type);
+    # play nice
     # play nice
     sleep(7);
 });
