@@ -9,7 +9,7 @@ DESCRIPTION
 
 INSTALLATION
 
-    Ensure you have an up to date Mojolicious isntalled:
+    Ensure you have an up to date Mojolicious installed:
 
     cpanm Mojolicious
 

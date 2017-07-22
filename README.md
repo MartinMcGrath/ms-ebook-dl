@@ -9,7 +9,7 @@ ebooks from Microsoft.
 
 # INSTALLATION
 
-Ensure you have an up to date [Mojolicious](https://metacpan.org/pod/Mojolicious) isntalled:
+Ensure you have an up to date [Mojolicious](https://metacpan.org/pod/Mojolicious) installed:
 
 `cpanm Mojolicious`
 

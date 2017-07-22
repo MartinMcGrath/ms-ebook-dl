@@ -19,7 +19,7 @@ ebooks from Microsoft.
 
 =head1 INSTALLATION
 
-Ensure you have an up to date L<Mojolicious> isntalled:
+Ensure you have an up to date L<Mojolicious> installed:
 
 C<cpanm Mojolicious>
 
