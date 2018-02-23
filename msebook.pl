@@ -58,7 +58,10 @@ $res->dom->find( $selector )->each( sub{
     my $title    = $_->children->[1]->all_text;
     my $url      = $_->children->[2]->at('a')->attr('href');
     my $type     = $_->children->[2]->at('a')->all_text;
-
+    
+    # sanitise filename
+    $title =~ s/[^A-Za-z0-9\- \.]//g;
+    $title =~ s/  / /g;
     # download each file
     print "downloading: $title\n";
     # create category directory unless it already exists
@@ -66,7 +69,6 @@ $res->dom->find( $selector )->each( sub{
     $ua->max_redirects(5)
       ->get( $url )
       ->result->content->asset->move_to($category . '/' . $title . '.' . $type);
-    # play nice
     # play nice
     sleep(7);
 });
