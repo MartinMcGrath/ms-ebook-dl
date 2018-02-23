@@ -61,7 +61,7 @@ $res->dom->find( $selector )->each( sub{
     
     # sanitise filename
     $title =~ s/[^A-Za-z0-9\- \.]//g;
-    $title =~ s/  / /g;
+    $title =~ s/ +/ /g;
     # download each file
     print "downloading: $title\n";
     # create category directory unless it already exists
